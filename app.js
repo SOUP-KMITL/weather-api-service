@@ -112,7 +112,7 @@ function averageDataByHr(data, hr){
                 "pm_2_5": 0
             }
             start_ts = element["ts"]
-            end_ts = end_ts + period - freq
+            end_ts = end_ts + period
         }
         (Object.keys(sum_data)).forEach(key => {
             sum_data[key] += parseFloat(element[key])
