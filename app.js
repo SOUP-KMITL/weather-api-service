@@ -81,7 +81,7 @@ function averageDataByHr(data, hr){
     const freq = data[1]["ts"] - data[0]["ts"]
     const period = 60 * 60 * hr * 1000
     var start_ts = data[0]["ts"]
-    var end_ts = start_ts + period
+    var end_ts = start_ts + period - freq
     var n = 0
     var avg_data = []
     var sum_data = {
