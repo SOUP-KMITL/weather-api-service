@@ -51,7 +51,7 @@ const weatherCredential = {
     ]
 }
 app.get('/weather/:weatherId/', (req, res) => {
-    if (req.params.weatherId >= 3) res.send({"result": []})
+    if (req.params.weatherId > 3) return res.send({"result": []})
     let day = req.query.day;
     let avg_hr = req.query.hr;
     var options = {
