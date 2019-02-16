@@ -3,6 +3,7 @@ services :
   api-service :
     build : 
       context: .
+      network: host
     image : worker1:5000/kmitl-weather-api-service
     networks: 
       - default
