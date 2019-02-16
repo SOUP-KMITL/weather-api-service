@@ -93,8 +93,8 @@ function averageDataByHr(data, hr){
         "pm_2_5": 0
     }
 
-    data.forEach(element => {
-        if (element["ts"] > end_ts) {
+    data.forEach((element, idx) => {
+        if (element["ts"] > end_ts || idx == data.length-1) {
             (Object.keys(sum_data)).forEach(key => {
                 sum_data[key] = Math.round((sum_data[key]/n)  * 1000) / 1000
             })
